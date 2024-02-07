@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { TextField, Button, Chip, MenuItem } from "@mui/material";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import the CSS for toastify
 import "./Form.css"; // Import CSS file for additional styling
 
 function Form() {
@@ -18,6 +20,11 @@ function Form() {
     };
 
     const preMessage = `${type}${footer === "BREAKING CHANGE: " ? "!" : ""}${footer === "UNSTABLE VERSION: " ? "?" : ""}${scope ? `(${scope})` : ""}: ${description}${footer === "None" ? "" : "\n\n" + footer}`;
+
+    const handleCopy = () => {
+        // Logic to copy form result to clipboard
+        toast.success("Content copied to clipboard!"); // Show success toast
+    };
 
     return (
         <div className="form-container"> {/* Apply styling to form container */}
@@ -90,11 +97,12 @@ function Form() {
                 </div>
 
                 <CopyToClipboard text={preMessage}>
-                    <Button variant="outlined" color="primary">
+                    <Button onClick={handleCopy} variant="outlined" color="primary">
                         Copy Result
                     </Button>
                 </CopyToClipboard>
             </div>
+            <ToastContainer /> {/* Toast container for displaying toasts */}
         </div>
     );
 }
