@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/CommitGenerator/static/css/main.e7ef6157.css",
-    "main.js": "/CommitGenerator/static/js/main.3d29093f.js",
+    "main.css": "/CommitGenerator/static/css/main.231495fb.css",
+    "main.js": "/CommitGenerator/static/js/main.8c36e44a.js",
     "static/js/592.cc87fdc6.chunk.js": "/CommitGenerator/static/js/592.cc87fdc6.chunk.js",
     "index.html": "/CommitGenerator/index.html",
-    "main.e7ef6157.css.map": "/CommitGenerator/static/css/main.e7ef6157.css.map",
-    "main.3d29093f.js.map": "/CommitGenerator/static/js/main.3d29093f.js.map",
+    "main.231495fb.css.map": "/CommitGenerator/static/css/main.231495fb.css.map",
+    "main.8c36e44a.js.map": "/CommitGenerator/static/js/main.8c36e44a.js.map",
     "592.cc87fdc6.chunk.js.map": "/CommitGenerator/static/js/592.cc87fdc6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7ef6157.css",
-    "static/js/main.3d29093f.js"
+    "static/css/main.231495fb.css",
+    "static/js/main.8c36e44a.js"
   ]
 }
