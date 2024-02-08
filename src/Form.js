@@ -26,6 +26,10 @@ function Form() {
     const preMessage = `${type}${chip[0] === "B" ? "!" : ""}${chip[0] === "U" ? "?" : ""}${scope ? `(${scope})` : ""}: ${description}${chip === "None" ? "" : "\n\n" + chip}`;
 
     const handleCopy = () => {
+        setType("");
+        setScope("");
+        setDescription("");
+        setChip("None");
         toast.success("Content copied to clipboard!"); // Show success toast
     };
 
@@ -121,7 +125,7 @@ function Form() {
             </form>
 
             <div>
-                <h2>Form Result:</h2>
+                <h2>Message:</h2>
 
                 <div className="pre-container"> {/* Apply styling to pre container */}
                     <pre className="pre">{preMessage}</pre>
