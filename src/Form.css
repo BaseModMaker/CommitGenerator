@@ -1,23 +1,50 @@
+body {
+    background-color: whitesmoke;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    font-family: 'Roboto', sans-serif; /* Set default font family */
+    transition: background-color 0.3s; /* Add transition for smooth background color change */
+}
+
+/* Apply styles for dark mode */
+body.dark-mode {
+    background-color: #121212; /* Dark mode body background color */
+}
+
 .form-container {
     margin: 20px;
     padding: 20px;
-    /* border: 1px solid lightgray; Add light gray border */
-    border-radius: 8px;
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+/* Apply styles for dark mode */
+.form-container.dark-mode {
+    color: #fff; /* Dark mode text color */
 }
 
 .form {
     width: 500px; /* Set form width */
 }
 
+/* Update form background color and text color for dark mode */
+.form-container.dark-mode .form {
+    color: #fff; /* Dark mode form text color */
+}
+
 .form-item {
     margin: 10px;
 }
 
-.chip-container {
-    margin: 10px;
+.form-container.dark-mode .form-item {
+    background-color: #454545; /* Dark mode chip background color */
+}
+
+.chip-stack {
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .chip {
@@ -32,3 +59,24 @@
     background-color: #f9f9f9; /* Add light gray background */
     text-align: left;
 }
+
+/* Update pre container styles for dark mode */
+.form-container.dark-mode .pre-container {
+    border: 1px solid #666; /* Dark mode border color */
+    background-color: #222; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+}
+
+/* Mui icon root */
+.App .theme-toggle .MuiSvgIcon-root{
+    position:fixed;
+    bottom:-200px;
+    right:-200px;
+    z-index:0;
+   }
+   
+   /* Mui icon root */
+   #root .App main .form-container .theme-toggle .MuiSvgIcon-root{
+    top:5% !important;
+    left:94% !important;
+   }
