@@ -4,6 +4,7 @@ body {
     padding: 0; /* Remove default body padding */
     font-family: 'Roboto', sans-serif; /* Set default font family */
     transition: background-color 0.3s; /* Add transition for smooth background color change */
+    text-align: center;
 }
 
 /* Apply styles for dark mode */
@@ -67,16 +68,8 @@ body.dark-mode {
     color: #fff; /* Dark mode text color */
 }
 
-/* Mui icon root */
-.App .theme-toggle .MuiSvgIcon-root{
+.theme-toggle{
     position:fixed;
-    bottom:-200px;
-    right:-200px;
-    z-index:0;
-   }
-   
-   /* Mui icon root */
-   #root .App main .form-container .theme-toggle .MuiSvgIcon-root{
-    top:5% !important;
-    left:94% !important;
-   }
+    top:4%;
+    left:95%;
+}
