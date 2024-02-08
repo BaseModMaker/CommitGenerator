@@ -80,10 +80,18 @@ function Form() {
                 </div>
 
                 <Stack spacing={1} direction="row" className="chip-stack">
-                    {["None", "BREAKING CHANGE: ", "UNSTABLE VERSION: "].map((option) => (
+                    {["None", "BREAKING CHANGE", "UNSTABLE VERSION"].map((option) => (
                         <Chip
                             key={option}
-                            label={option}
+                            label={
+                                option === "BREAKING CHANGE" ?
+                                    <span>{"🚫 "}{option}</span> // "\u274C" is the crossed circle emoji
+                                    :
+                                    (option === "UNSTABLE VERSION" ?
+                                        <span>{"⚠️ "}{option}</span> // "\u274C" is the crossed circle emoji
+                                        :
+                                        option)
+                            }
                             clickable
                             color={chip === option ? "primary" : "default"}
                             onClick={() => handleFooterChipClick(option)}
@@ -96,7 +104,15 @@ function Form() {
                     <TextField
                         inputProps={{ style: { color: darkMode ? "whitesmoke" : "black" } }}
                         label="Footer"
-                        value={chip}
+                        value={
+                            chip === "BREAKING CHANGE" ? 
+                                "BREAKING CHANGE: " 
+                                : 
+                                (chip === "UNSTABLE VERSION" ? 
+                                    "UNSTABLE VERSION: " 
+                                    : 
+                                    chip)
+                        }
                         onChange={(e) => setChip(e.target.value)}
                         fullWidth
                         disabled={chip === "None"}
